@@ -1,0 +1,188 @@
+:root{
+	--font-family: sans-serif;
+/*	variabel till font*/
+	--navy: #7894bc;
+/*	variabel navy hexkod*/
+	--blue: #a0dcec;
+/*	variabel blå hexkod*/
+	--white: white;
+/*	variabel vit*/
+
+}
+@font-face {
+    font-family:'sprint'; 
+    src: url('../8fonter/sprint.ttf'); 
+}
+/*Font som har variabelnamn "sprint"*/
+@font-face { 
+    font-family:'become'; 
+    src: url('../8fonter/become.otf'); 
+}
+/*Font som har variabelnamn "become"*/
+@media all and (max-width: 1300px) {
+	#content{
+		grid-template:  1 1/ 1fr 1fr !important;
+		height: fit-content;
+	}
+	#txt{
+		grid-row: 1;
+		grid-column: 1 / span 2 !important;
+	}
+	#bild{
+		grid-column: 1 / span 2 !important;
+		grid-row: 2;
+	}
+	img{
+		width: 87vw !important;
+	}
+	header{
+		font-size: 40px !important;
+	}
+	li{
+		font-size: 12px !important;
+	}
+/*Important gör så att koden prioriteras*/
+}
+/*När bredden på fönstret blir 1300 pixlar eller mindre ändras grid template och var olika element är placerade i den nya templaten.
+Även bilder tar upp 87% av visningsbredden istället för tidigare 48%
+Font storlekarna på rubriken och snabbmenyn minskar även så att de får plats */
+body{
+	margin: 0px;
+	overflow-x: hidden;
+/*	marigin är i grund satt till 0 som sedan kan justeras på specifika element.
+Allt överflöd som gör att man kan kolla i sidled försvinner även*/
+}
+header{
+	font-size: 60px;
+	color: var(--white);
+	background-color: var(--blue);
+	text-align: center;
+	margin: 0px;
+	padding-top: 5px;
+	font-family: 'sprint';	
+/*storlekar, färger, utseende och placering till headern*/
+}
+ul{
+	list-style-type: none;
+	display: flex;
+  	justify-content: space-evenly;
+	background-color: var(--navy);
+	color: var(--white);
+	margin: 0px;
+	margin-bottom: 15px;
+	padding: 8px;
+}
+li{
+	display: inline-block;
+	font-size: 23px;
+	font-family: 'become';
+	color: var(--white);
+	transition: 350ms ease;
+}
+li:hover{
+	 scale: 1.05;
+}
+a{
+	color: var(--white);
+    text-decoration:none;
+}
+a:hover, a:focus {
+    text-decoration:underline;
+    color: var(--white);
+   
+}
+a:visited{
+	color: var(--white);
+}
+/*från ul{ till hit är css kod till snabbmenyn. Koden gör t.ex. texten större när man hovrar över den. 
+Man ser även till att länkarna aldrig ändrar färg utan alltid är vita*/
+.bildk{
+	margin: 0px;
+	font-style: italic;
+	font-size: 10px;
+/*bildkällan skrivs i kursiv stil och är 10 pixlar stor*/
+}
+#content{
+	display: grid;
+	grid-template:  1fr / 3fr 1fr;
+/*Innehållet på sidan ska displaya grid med ovanstående template*/
+}
+#txt{
+	grid-column: 1;
+	margin-top: 0px;
+	margin: 10px;
+/*Texten placeras i kolumn 1 i grid och har 10 pixlar marign överallt förutom vid toppen där margin=0*/
+}
+h2{
+	font-family: var(--font-family);
+	font-size: 30px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+/*underrubriker*/
+p{
+	font-family: var(--font-family);
+	font-size: 18px;
+	margin-top: 3px;
+	line-height: 30px;
+}
+/*informerande text*/
+table{
+  border-collapse: collapse;
+  margin-bottom: 10px;
+
+}
+#table{
+	overflow-x: scroll;
+	scrollbar-color: var(--navy) var(--white) ;
+/*	När fönstret minskar i bredd så pass mycket att tabellen inte får plats på en sida kommer det en scroll i x led.
+Bakgrundsfärgen är densamma som övrig bakgrund och skrollen är marinblå*/
+}
+td{
+	border: 1px solid black;
+	text-align: center;
+	font-family: var(--font-family);
+	padding: 10px;
+}
+td a{
+	color: var(--navy);
+    text-decoration:none;
+}
+td a:hover, td a:focus {
+    text-decoration:underline;
+    color: var(--navy);
+}
+td a:visited{
+	color: var(--navy);
+}
+thead td{
+	font-weight: 900;
+	border-bottom: 3px solid black;
+	border-left: 3px solid black;
+}
+#nej{
+	border-left: 1px solid black;
+}
+/*Från table till hit är css kod till en tabell. 
+Här specificeras bland annat kantfärgen, kantstorleken, fonten och färgerna på länkarna (dessa ändras inte efter man har klickat på de.)*/
+#bild{
+	grid-column: 2;
+	margin: 10px;
+/*Bilderna placeras i kolummn 2 med en margin på 10 pixlar.*/
+}
+img{
+	width: 48vw;
+	margin-bottom: -10px;
+}
+/*Bilderna har en bredd på 48% av bredden på fönstret och en negativ margin nertill för att få bildkälletexten närmare*/
+
+footer{
+	font-family: var(--font-family);
+	font-size: 17px;
+	color: var(--white);
+	background-color: var(--navy);
+	text-align: center;
+	position: absolute;
+	width: 100%;
+/*fotnot, tar upp hela bredden och är alltid placerad längst ner på sidan.*/
+}

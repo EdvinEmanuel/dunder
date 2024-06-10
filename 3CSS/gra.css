@@ -1,0 +1,161 @@
+:root{
+	--font-family: sans-serif;
+/*	variabel till font*/
+	--navy: #7894bc;
+/*	variabel navy hexkod*/
+	--blue: #a0dcec;
+/*	variabel blå hexkod*/
+	--white: white;
+/*	variabel vit*/
+
+}
+@font-face {
+    font-family:'sprint'; 
+    src: url('../8fonter/sprint.ttf'); 
+}
+/*Font som har variabelnamn "sprint"*/
+@font-face { 
+    font-family:'become'; 
+    src: url('../8fonter/become.otf'); 
+}
+/*Font som har variabelnamn "become"*/
+@media all and (max-width: 1282px) {
+	#m{
+		width: 67vw !important;
+	}
+	#passb{
+		width: 95vw !important;
+	}
+/*	När bredden är 1282 pixlar eller mindre ändras layouten genom att ändra bredden på olika element. 
+Då gör flex så att saker och ting flyttar på sig eftersom de inte får plats på samma rad*/
+}
+@media all and (max-width: 949px) {
+	#viktb{
+		width: 95vw !important;
+		height: 60vh !important;
+	}
+	#v{
+		width: 95vw !important;
+	}
+	#m{
+		width: 95vw !important;
+	}
+	#passb{
+		width: 95vw !important;
+	}
+	header{
+		font-size: 40px !important;
+	}
+	li{
+		font-size: 12px !important;
+	}
+/*Important gör så att koden prioriteras*/
+/*	När bredden är 949 pixlar eller mindre ändras layouten genom att ändra bredden på olika element. 
+Då gör flex så att saker och ting flyttar på sig eftersom de inte får plats på samma rad.
+Även font size på rubriken och länkarna minskar så att de ska få plats.*/
+}
+body{
+	margin: 0;
+	overflow-x: hidden;
+/*	marigin är i grund satt till 0 som sedan kan justeras på specifika element.
+Allt överflöd som gör att man kan kolla i sidled försvinner även*/
+}
+header{
+	font-size: 60px;
+	color: var(--white);
+	background-color: var(--blue);
+	text-align: center;
+	margin: 0px;
+	padding-top: 5px;
+	font-family: 'sprint';
+	/*storlekar, färger, utseende och placering till headern*/
+}
+ul{
+	list-style-type: none;
+	display: flex;
+  	justify-content: space-evenly;
+	background-color: var(--navy);
+	color: var(--white);
+	margin: 0px;
+	margin-bottom: 15px;
+	padding: 8px;
+}
+li{
+	display: inline-block;
+	font-size: 23px;
+	font-family: 'become';
+	color: var(--white);	
+	transition: 350ms ease;
+}
+li:hover{
+	 scale: 1.05;
+}
+a{
+	color: var(--white);
+    text-decoration:none;
+}
+a:hover, a:focus {
+    text-decoration:underline;
+    color: var(--white);
+}
+a:visited{
+	color: var(--white);
+}
+/*från ul{ till hit är css kod till snabbmenyn. Koden gör t.ex. texten större när man hovrar över den. 
+Man ser även till att länkarna aldrig ändrar färg utan alltid är vita*/
+#content{
+	display: flex;
+	flex-wrap: wrap;
+/*	Allt innehåll ska display flex och wrapa om de inte får plats på samma rad*/
+}
+#v{
+	width: 27vw;
+	margin: 10px;
+}
+#m{
+	width: 40vw;
+	margin: 10px;
+}
+#h{
+	width: 27vw;
+	margin: 10px;
+}
+/*vänster och höger tar upp 27% av visningsbredden medan mitten tar upp 40%.
+Margin gör så att det totalt blir så gott som 100% totalt*/
+img{
+	width: 27vw;
+	height: 87vh;
+	margin-bottom: -10px;
+}
+/*Alla mina bilder som har denna css är 27% av visningsbredden breda och 87% av visningshöjden.
+Mariginen nertill är negativ för att få bildkällan närmare bilden. */
+.bildk{
+	margin: 0px;
+	font-style: italic;
+	font-size: 10px;
+}
+/*bildkällan skrivs i kursiv stil och är 10 pixlar stor*/
+h2{
+	font-family: var(--font-family);
+	font-size: 30px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+/*underrubriker*/
+p{
+	font-family: var(--font-family);
+	font-size: 18px;
+	margin-top: 3px;
+	line-height: 30px;
+}
+/*informerande text*/
+footer{
+	font-family: var(--font-family);
+	font-size: 17px;
+	color: var(--white);
+	background-color: var(--navy);
+	text-align: center;
+	position: absolute;
+	width: 100%;
+}
+/*fotnot, tar upp hela bredden och är alltid placerad längst ner på sidan.*/

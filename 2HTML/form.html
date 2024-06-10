@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tyck till</title>
+	<link href="../3CSS/gron.css" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="../7Ovriga_bilder/cover.png">
+</head>
+<body>
+	<!-- Rubrik -->
+	<header><a href="startsida.html"><span lang="en"> The Runner </span></a></header> 
+	<!-- Länkar vidare till andra sidor -->
+	<ul>
+			<li><a href="lopp_att_springa.html">Lopp Att Springa</a></li>
+		<li><a href="skor_investera.html">Skor Att Investera I</a></li>
+		<li><a href="personer_minnet.html">Personer Att Lägga På Minnet</a></li>
+	</ul>
+	<div id="content">
+		<div id="v">
+			<img src="../7Ovriga_bilder/the_thinker.luismolinero-123rf.png" alt="Bild på person utklädd i löparkläder och tänker" id="viktb">
+			<p class="bildk">Bildkälla: Luis Molinero, 123rf</p>
+		</div>
+		<div id="m">
+			<form action="a" method="post" id="M">
+				<fieldset>
+					<legend>Om Dig</legend>
+					<label for="namn">Namn: </label>
+					<input type="text" name="namn" placeholder="Namn" id="namn">
+					<label for="email" >E-Post: </label>
+					<input type="email" name="email" placeholder="E-Post" id="email">
+					<label>Kön: </label>
+					<select name="land" id="land"> 
+						<option value="">--Välj ditt kön--</option>
+						<option value="sv">Man</option>
+						<option value="th">Kvinna</option>
+						<option value="fi">Vill inte ange</option>
+					</select>
+					<label>Springer du till vardags?</label>
+					<label for="runy">Ja
+					<input type="radio" name="run" id="runy"> </label>
+					<label for="runn">Nej
+					<input type="radio" name="run" id="runn"> </label>
+					<label for="freq">Om Ja, hur många gånger i veckan?</label>
+					<input type="number" name="freq" min="0" placeholder="0" id="freq">
+					
+				</fieldset>
+				<div>
+					<fieldset>
+						<legend>Om Webbplatsen</legend>
+						<label>Ser du förbättringspotential på denna webbplats?</label>
+					<label for="bet">Ja
+					<input type="radio" name="bet" id="bet"> </label>
+					<label for="bet1">Nej
+					<input type="radio" name="bet1" id="bet1"> </label>
+
+					<label for="bla">Om Ja, Vad kan förbättras?</label>
+					<textarea name="bla" id="bla"></textarea>
+
+					<label>Vad vill du ha på denna webbplats?</label>
+					<label for="nav"><input type="checkbox" id="nav" name="nav">Enklare Navigation</label>
+					<label for="sid"><input type="checkbox" id="sid" name="sid">Snyggare Sidor</label>
+					<label for="mtxt"><input type="checkbox" id="mtxt" name="mtxt">Mindre Text</label>
+					<label for="Mtxt"><input type="checkbox" id="Mtxt" name="Mtxt">Mer Text</label>
+					<label for="fb"><input type="checkbox" id="fb" name="fb">Färre bilder</label>
+					<label for="Fb"><input type="checkbox" id="Fb" name="Fb">Flera bilder</label>
+					
+					</fieldset>
+				</div>
+				<input type="submit" name="submit" id="submit">
+			</form>
+		</div>
+		<div id="h">
+			<img src="../7Ovriga_bilder/bla.jonah_rosenberg-runners_world.jpg" alt="Bild på tjej som springer." id="passb">
+			<p class="bildk">Bildkälla: <span lang="en">Jonah Rosenberg</span></p>
+		</div>
+	</div>
+	<!-- footer med copyright -->
+	<footer>©Edvin Emanuelsson 2024</footer>
+</body>
+</html>

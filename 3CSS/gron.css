@@ -1,0 +1,188 @@
+:root{
+	--font-family: sans-serif;
+/*	variabel till font*/
+	--navy: #7894bc;
+/*	variabel navy hexkod*/
+	--blue: #a0dcec;
+/*	variabel blå hexkod*/
+	--white: white;
+/*	variabel vit*/
+
+}
+@font-face {
+    font-family:'sprint'; 
+    src: url('../8fonter/sprint.ttf'); 
+}
+/*Font som har variabelnamn "sprint"*/
+@font-face { 
+    font-family:'become'; 
+    src: url('../8fonter/become.otf'); 
+}
+/*Font som har variabelnamn "become"*/
+@media all and (max-width: 1090px) {
+	#v{
+		width: 30vw !important;
+	}
+	#m{
+		width: 60vw !important;
+	}
+	#passb{
+		width: 95vw !important;
+	}
+}
+/*När bredden på fönstret är 1090 pixlar eller mindre ändras bredden på vissa element så att layouten ändras.*/
+@media all and (max-width: 850px) {
+	#viktb{
+		width: 95vw !important;
+		height: 60vw !important;
+	}
+	#m{
+		width: 95vw !important;
+	}
+	#passb{
+		width: 95vw !important;
+	}
+	header{
+		font-size: 40px !important;
+	}
+	li{
+		font-size: 12px !important;
+	}
+}
+/*När bredden på fönstret är 850 pixlar eller mindre ändras bredden på vissa element så att layouten ändras.
+Font storlekarna på rubriken och snabbmenyn minskar även så att de får plats */
+
+legend{
+	font-family: var(--font-family);
+	background-color: var(--navy);
+	color: var(--white);
+	padding: 4px;
+	margin: 5px;
+}
+/*Här specificeras font, färg och storlek på legenderna i formuläret*/
+label{
+	display: block;
+	font-family: var(--font-family);
+	margin-top: 5px;
+}
+/*Här specificeras saker såsom font för label i formuläret*/
+option{
+	font-family: var(--font-family);
+}
+body{
+	margin: 0;
+	overflow-x: hidden;
+/*	marigin är i grund satt till 0 som sedan kan justeras på specifika element.
+Allt överflöd som gör att man kan kolla i sidled försvinner även*/
+}
+
+header{
+	font-size: 60px;
+	color: var(--white);
+	background-color: var(--blue);
+	text-align: center;
+	margin: 0px;
+	padding-top: 5px;
+	font-family: 'sprint';
+/*storlekar, färger, utseende och placering till headern*/
+}
+ul{
+	list-style-type: none;
+	display: flex;
+  	justify-content: space-evenly;
+	background-color: var(--navy);
+	color: var(--white);
+	margin: 0px;
+	margin-bottom: 15px;
+	padding: 8px;
+}
+li{
+	display: inline-block;
+	font-size: 23px;
+	font-family: 'become';
+	color: var(--white);
+	transition: 350ms ease;
+}
+li:hover{
+	 scale: 1.05;
+}
+
+a{
+	color: var(--white);
+    text-decoration:none;
+}
+a:hover, a:focus {
+    text-decoration:underline;
+    color: var(--white);
+}
+a:visited{
+	color: var(--white);
+}
+/*från ul{ till hit är css kod till snabbmenyn. Koden gör t.ex. texten större när man hovrar över den. 
+Man ser även till att länkarna aldrig ändrar färg utan alltid är vita*/
+.bildk{
+	margin: 0px;
+	font-style: italic;
+	font-size: 10px;
+}
+/*bildkällan skrivs i kursiv stil och är 10 pixlar stor*/
+#content{
+	display: flex;
+	flex-wrap: wrap;
+}
+/*Innehållet på sidan ska displaya flex och wrapa när möjligt*/
+#txt{
+	margin-top: 0px;
+	margin: 10px;
+}
+
+p{
+	font-family: var(--font-family);
+	font-size: 18px;
+	margin-top: 3px;
+	line-height: 30px;
+}
+/*informerande text*/
+#v{
+	width: 28vw;
+	margin: 10px;
+}
+#m{
+	width: 35vw;
+	margin: 10px;
+}
+#h{
+	width: 28vw;
+	margin: 10px;
+}
+/*Vänster spalt tar upp 28% av fönsterbredden medan mitten tar upp 35% och höger 28%. 
+Restarande procent tas upp av margin.*/
+img{
+	height: 87vh;
+	width: 30vw;
+	margin-bottom: -10px;
+}
+#bild{
+	margin: 10px;
+}
+/*Bilder har en höjd på 87% av fönsterhöjden och en bredd på 30% av fönsterbredden.
+Negativ margin för att få bildkälla-texten närmare bilden.*/
+#submit{
+	background-color: var(--navy);
+	color: var(--white);
+	font-family: var(--font-family);
+	font-size: 20px;
+	width: 100px;
+	margin: 10px;
+}
+/*Specifikartioner såsom färg, bakgrundsfärg, storlek och margin för submitknappen*/
+footer{
+	font-family: var(--font-family);
+	font-size: 17px;
+	color: var(--white);
+	background-color: var(--navy);
+	text-align: center;
+	position: absolute;
+	width: 100%;
+/*fotnot, tar upp hela bredden och är alltid placerad längst ner på sidan.*/
+}
